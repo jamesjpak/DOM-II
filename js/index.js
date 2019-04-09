@@ -13,6 +13,12 @@ signBtns.addEventListener('click', function(){
     }
 });
 
+let crazyBackground = document.querySelector(".content-destination");
+
+crazyBackground.addEventListener("mousemove", function(event) {
+    event.target.style.backgroundColor = "lightblue";
+})
+
 
 const navColor = document.querySelector('header .nav');
 
@@ -58,6 +64,10 @@ window.addEventListener("keydown", function(event) {
     if (event.keyCode == 81) {
         document.querySelector(".logo-heading").style.color = "red";
     }
+
+    if (event.keyCode == 87) {
+        document.querySelector(".logo-heading").style.color = "white";
+    }
 })
 
 let resizedColor = document.querySelector(".intro h2");
@@ -70,3 +80,16 @@ let colorifyWord = document.querySelector(".text-content h2");
 colorifyWord.addEventListener("mousedown", function(event) {
     event.target.style.color = "green";
 });
+
+
+
+let scrollChange = document.querySelector(".content-destination h2")
+
+window.addEventListener("scroll", function(event) {
+    document.backgroundColor = "lightblue";
+});
+
+
+window.addEventListener("load", function(event) {
+    console.log("page successfuly loaded!");
+})
